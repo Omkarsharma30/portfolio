@@ -1,0 +1,659 @@
+/* Mobile Optimization Styles for Omkar's Portfolio
+   Created: July 10, 2025
+   This file contains mobile-specific styles that override the main style.css
+*/
+
+/* Enhanced styles for Key Strengths on mobile */
+.strength-item {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.strength-item.active, .strength-item:active {
+    background-color: rgba(52, 152, 219, 0.1);
+    transform: scale(0.98);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced styles for Education Cards on mobile */
+.education-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.education-card.expanded {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.education-card .specializations {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+/* Mobile tooltip for floating icons */
+.mobile-tooltip {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1000;
+    max-width: 200px;
+    text-align: center;
+    pointer-events: none;
+    animation: fadeInOut 1.5s forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Mobile scroll optimization */
+body.is-scrolling .profile-floating-elements {
+    will-change: transform;
+}
+
+body.is-scrolling .profile-float-item {
+    animation-play-state: paused;
+}
+
+/* Mobile menu animation */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Mobile General Styles (applied under 992px) */
+@media (max-width: 991.98px) {
+    /* Improved spacing and typography for mobile */
+    body {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Enhanced Mobile Navigation */
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.8rem 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    /* Hero Section Mobile Optimizations */
+    .hero-section {
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .hero-section .row.align-items-center {
+        min-height: auto;
+    }
+
+    .hero-content {
+        text-align: center;
+        padding: 2rem 0 0;
+    }
+
+    .hero-main-title {
+        font-size: clamp(2rem, 8vw, 2.5rem);
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .hero-quote {
+        width: 100%;
+        margin: 1.5rem auto;
+        padding: 1rem;
+    }
+
+    .quote-text {
+        font-size: 1rem;
+    }
+
+    /* Improved Button Layout for Mobile */
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px !important;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 12px 20px !important;
+        font-size: 0.95rem;
+    }
+
+    /* Enhanced Profile Image for Mobile */
+    .profile-image-wrapper {
+        width: 250px;
+        height: 250px;
+        margin: 0 auto 2rem;
+    }
+
+    /* Optimized Floating Elements for Mobile */
+    .profile-floating-elements {
+        transform: scale(0.85);
+    }
+
+    .profile-float-item {
+        width: 65px;
+        height: 65px;
+    }
+
+    .profile-float-item.item-1 {
+        top: -10%;
+        right: 5%;
+    }
+
+    .profile-float-item.item-2 {
+        bottom: 5%;
+        right: -10%;
+    }
+
+    .profile-float-item.item-3 {
+        bottom: -5%;
+        left: 10%;
+    }
+
+    .profile-float-item.item-4 {
+        top: 5%;
+        left: -10%;
+    }
+
+    /* About Section Mobile Optimizations */
+    .about-content, .skills-section, .education-section {
+        margin-bottom: 2rem;
+    }
+
+    .content-card, .skills-card, .education-card {
+        padding: 1.5rem !important;
+    }
+
+    /* Key Strengths Mobile Optimization */
+    .key-strengths {
+        padding: 1rem;
+        background-color: rgba(245, 247, 250, 0.5);
+        border-radius: 10px;
+        margin-top: 1.5rem;
+    }
+
+    .key-strengths h5 {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .strength-item {
+        background-color: #fff;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    /* Make strengths display in full width on small screens */
+    @media (max-width: 575.98px) {
+        .key-strengths .col-6 {
+            width: 100%;
+        }
+    }
+
+    /* Education Section Mobile Optimization */
+    .education-section {
+        padding-top: 2rem;
+    }
+    
+    .education-header {
+        margin-bottom: 2rem !important;
+    }
+    
+    .education-date {
+        margin-bottom: 1.5rem;
+    }
+
+    .date-badge {
+        margin: 0 auto;
+        max-width: 150px;
+    }
+    
+    .education-card {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Improved education timeline layout for mobile */
+    .education-timeline .row {
+        flex-direction: column;
+    }
+    
+    .education-content {
+        text-align: center;
+        padding-top: 1rem;
+    }
+    
+    .education-content h4 {
+        font-size: 1.25rem;
+    }
+    
+    .education-content h5 {
+        font-size: 1.1rem;
+    }
+    
+    .achievement-badge {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        margin: 1rem 0;
+    }
+    
+    .achievement-badge .badge {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .specializations .badge {
+        margin: 0.25rem;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    /* Project Section Mobile Optimizations */
+    .project-hero-card {
+        padding: 1.5rem !important;
+    }
+
+    .project-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .project-badges .badge {
+        margin: 0;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .technical-specs {
+        padding: 1.5rem !important;
+    }
+
+    .spec-item {
+        margin-bottom: 1.5rem;
+    }
+
+    .project-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project-actions .btn {
+        width: 100%;
+    }
+
+    /* Resume Section Mobile Optimization */
+    .resume-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Contact Section Mobile Optimization */
+    .contact-form .form-control {
+        padding: 0.8rem;
+    }
+
+    /* Enhanced Section Headers for Mobile */
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-divider {
+        margin: 1rem auto;
+    }
+
+    /* Scroll Indicator Mobile Positioning */
+    .scroll-indicator {
+        bottom: 20px;
+    }
+}
+
+/* Footer Mobile Optimizations */
+footer {
+    padding: 1.5rem 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+footer .text-white-50 {
+    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Extra Small Devices (phones under 576px) */
+@media (max-width: 575.98px) {
+    .hero-main-title {
+        font-size: clamp(1.8rem, 7vw, 2.2rem);
+    }
+
+    .profile-image-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* Key Strengths improvements for very small screens */
+    .key-strengths-grid {
+        margin: 0;
+    }
+    
+    .col-strength {
+        width: 100%;
+        padding: 0.35rem;
+    }
+    
+    .strength-item {
+        padding: 10px;
+    }
+    
+    /* Education improvements for very small screens */
+    .education-card-row {
+        margin: 0;
+    }
+    
+    .education-card .badge {
+        font-size: 0.7rem !important;
+        padding: 0.4rem 0.8rem !important;
+    }
+    
+    .education-content h4 {
+        font-size: 1.1rem;
+    }
+    
+    .education-content h5 {
+        font-size: 1rem;
+    }
+    
+    .education-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Further reduce size for very small screens */
+    .profile-floating-elements {
+        transform: scale(0.75);
+    }
+
+    .profile-float-item {
+        width: 60px;
+        height: 60px;
+    }
+
+    .profile-float-item i {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust spacing for very small screens */
+    section {
+        padding: 2.5rem 0;
+    }
+
+    .content-card, .skills-card, .education-card, .project-hero-card, .technical-specs {
+        padding: 1.2rem !important;
+    }
+
+    /* Stack badges vertically on extra small screens */
+    .project-badges {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .project-badges .badge {
+        width: 100%;
+        max-width: 220px;
+    }
+}
+
+/* Portrait Phone Optimization */
+@media (max-width: 380px) {
+    .hero-main-title {
+        font-size: 1.6rem;
+    }
+
+    .profile-image-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-floating-elements {
+        transform: scale(0.7);
+    }
+
+    /* Further adjust positions for very small screens */
+    .profile-float-item.item-1 {
+        right: 0;
+    }
+
+    .profile-float-item.item-2 {
+        right: -5%;
+    }
+
+    .profile-float-item.item-3 {
+        left: 5%;
+    }
+
+    .profile-float-item.item-4 {
+        left: -5%;
+    }
+}
+
+/* Landscape Mode Optimization */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero-section {
+        padding: 120px 0 50px;
+    }
+
+    .hero-section .row {
+        flex-direction: row-reverse;
+    }
+
+    .profile-image-wrapper {
+        width: 180px;
+        height: 180px;
+        margin-top: 2rem;
+    }
+
+    .hero-content {
+        padding-top: 0;
+    }
+
+    .profile-floating-elements {
+        transform: scale(0.65);
+    }
+}
+
+/* Technical Skills Progress Bars for Mobile */
+@media (max-width: 768px) {
+    /* Skills section container improvements */
+    .skills-section .skills-card {
+        padding: 1.25rem !important;
+    }
+    
+    .skills-grid {
+        padding: 0.5rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Each skill item styling */
+    .skill-item {
+        margin-bottom: 1.2rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.97);
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+    
+    /* Active state for touch feedback */
+    .skill-item:active, .skill-item.active {
+        transform: scale(0.98);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    }
+    
+    /* Better align skill item content */
+    .skill-item .d-flex {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    
+    /* Icon styling */
+    .skill-item i {
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.03);
+        border-radius: 50%;
+    }
+    
+    /* Badge styling */
+    .skill-item .badge {
+        font-size: 0.65rem;
+        padding: 0.35rem 0.65rem;
+        border-radius: 30px;
+        font-weight: 500;
+    }
+    
+    /* Progress bar improvements */
+    .progress {
+        height: 8px;
+        margin-top: 10px;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+    }
+    
+    .progress-bar {
+        transition: width 1s ease;
+        border-radius: 4px;
+    }
+    
+    /* Percentage text */
+    .skill-item .text-dark.small {
+        font-size: 0.7rem;
+        font-weight: 600;
+        opacity: 0.75;
+    }
+    
+    /* Skill name styling */
+    .skill-item .fw-medium {
+        font-size: 0.9rem;
+    }
+    
+    /* Last skill item needs no margin */
+    .skill-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Mobile Card Consistency */
+@media (max-width: 991.98px) {
+    /* Card sizing for mobile */
+    .about-content .content-card,
+    .skills-section .skills-card {
+        min-height: auto; /* Remove fixed height on mobile */
+        margin-bottom: 2rem;
+        padding: 2rem 1.5rem;
+    }
+    
+    /* Ensure skills content is properly spaced */
+    .skills-grid {
+        margin-bottom: 0;
+    }
+    
+    .skill-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .about-content .content-card,
+    .skills-section .skills-card {
+        min-height: 550px; /* Slightly smaller minimum height for tablets */
+    }
+}
+
+/* Responsive Contact Form */
+@media (max-width: 767.98px) {
+    .contact-form .form-control {
+        padding: 10px 15px;
+    }
+    
+    .contact-form button[type="submit"] {
+        width: 100%;
+    }
+    
+    #form-result .alert {
+        padding: 10px;
+        font-size: 14px;
+    }
+}

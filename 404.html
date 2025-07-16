@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Omkar Kumar Sharma</title>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 404 Specific CSS -->
+    <link rel="stylesheet" href="css/404.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-hard-hat me-2"></i>Portfolio
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#project">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 Section -->
+    <section class="error-section">
+        <div class="error-particles"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="error-content text-center">
+                        <div class="error-number-wrapper">
+                            <div class="error-number">404</div>
+                            <div class="error-blueprint">
+                                <div class="blueprint-lines"></div>
+                                <div class="blueprint-circle"></div>
+                                <div class="blueprint-grid"></div>
+                            </div>
+                        </div>
+                        
+                        <h1 class="error-title">Oops! Construction Zone Ahead! 🚧</h1>
+                        <p class="error-description">Looks like our construction crew took a coffee break and forgot where they put this page! Don't worry, it's probably just buried under some blueprints.</p>
+                        
+                        <div class="funny-quotes">
+                            <div class="quote-bubble">
+                                <i class="fas fa-quote-left"></i>
+                                <span class="quote-text">"Have you tried turning the website off and on again?"</span>
+                                <small class="quote-author">- IT Department</small>
+                            </div>
+                        </div>
+                        
+                        <div class="error-animation">
+                            <div class="construction-scene">
+                                <div class="crane">
+                                    <div class="crane-arm"></div>
+                                    <div class="crane-weight"></div>
+                                    <div class="crane-cabin"></div>
+                                    <div class="crane-cable"></div>
+                                </div>
+                                <div class="hard-hat">
+                                    <i class="fas fa-hard-hat"></i>
+                                </div>
+                                <div class="blueprint-roll">
+                                    <div class="blueprint-paper"></div>
+                                </div>
+                                <div class="worker-speech">
+                                    <div class="speech-bubble">
+                                        "Boss, I think we lost the page... again! 🤷‍♂️"
+                                    </div>
+                                </div>
+                                <div class="floating-tools">
+                                    <i class="fas fa-hammer tool-1"></i>
+                                    <i class="fas fa-wrench tool-2"></i>
+                                    <i class="fas fa-screwdriver tool-3"></i>
+                                </div>
+                                <!-- Interactive Elements -->
+                                <div class="clickable-elements">
+                                    <div class="traffic-cone cone-1" data-tooltip="Click me! 🚧" onclick="animateCone(this)">
+                                        🚧
+                                    </div>
+                                    <div class="traffic-cone cone-2" data-tooltip="I'm clickable too!" onclick="animateCone(this)">
+                                        🚧
+                                    </div>
+                                    <div class="construction-worker" data-tooltip="Need help?" onclick="showWorkerDialog()">
+                                        👷‍♂️
+                                    </div>
+                                </div>
+                                <!-- Flying Construction Items -->
+                                <div class="flying-items">
+                                    <div class="flying-item item-1">📏</div>
+                                    <div class="flying-item item-2">🔧</div>
+                                    <div class="flying-item item-3">📐</div>
+                                    <div class="flying-item item-4">🏗️</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Random Construction Facts -->
+                        <div class="construction-facts bg-warning bg-opacity-10 p-4 rounded-4 mb-4">
+                            <h5 class="text-warning-emphasis mb-3">
+                                <i class="fas fa-lightbulb me-2"></i>Construction Fun Fact
+                            </h5>
+                            <div class="fact-content" id="factContent">
+                                <p class="mb-2" id="currentFact">Click the button to learn something cool about construction!</p>
+                                <button class="btn btn-warning btn-sm" onclick="showRandomFact()">
+                                    <i class="fas fa-dice me-2"></i>New Fact
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Progress Bar Animation -->
+                        <div class="construction-progress mb-4">
+                            <h6 class="text-secondary mb-2">Page Reconstruction Progress</h6>
+                            <div class="progress" style="height: 25px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" 
+                                     role="progressbar" style="width: 0%" id="progressBar">
+                                    <span class="progress-text">Building...</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-success btn-sm mt-2" onclick="startConstruction()">
+                                <i class="fas fa-play me-2"></i>Start Construction
+                            </button>
+                        </div>
+                        
+                        <div class="error-actions">
+                            <a href="index.html" class="btn btn-primary btn-lg rounded-pill me-3 pulse-btn">
+                                <i class="fas fa-home me-2"></i>Teleport Home
+                            </a>
+                            <a href="index.html#contact" class="btn btn-outline-primary btn-lg rounded-pill">
+                                <i class="fas fa-envelope me-2"></i>Send SOS Signal
+                            </a>
+                        </div>
+                        
+                        <!-- Fun Error Code -->
+                        <div class="error-code mt-4">
+                            <span class="badge bg-danger fs-6 px-3 py-2 rounded-pill">
+                                <i class="fas fa-exclamation-triangle me-2"></i>Error Code: COFFEE_NOT_FOUND
+                            </span>
+                        </div>
+                        
+                        <div class="error-suggestions mt-5">
+                            <h5 class="suggestion-title">While you're here, maybe check out:</h5>
+                            <div class="suggestion-links">
+                                <a href="index.html#about" class="suggestion-link">
+                                    <i class="fas fa-user-tie"></i>
+                                    <span>Meet the Engineer</span>
+                                    <small>No hard hat required!</small>
+                                </a>
+                                <a href="index.html#project" class="suggestion-link">
+                                    <i class="fas fa-building"></i>
+                                    <span>Cool Projects</span>
+                                    <small>100% Page-found guarantee</small>
+                                </a>
+                                <a href="assets/resume.pdf" class="suggestion-link" download>
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Download Resume</span>
+                                    <small>This one actually works!</small>
+                                </a>
+                                <a href="index.html#contact" class="suggestion-link">
+                                    <i class="fas fa-paper-plane"></i>
+                                    <span>Send Message</span>
+                                    <small>Report missing pages here</small>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Fun Statistics -->
+                        <div class="error-stats mt-5">
+                            <div class="row text-center">
+                                <div class="col-md-3 col-6 mb-3">
+                                    <div class="stat-card animated-counter">
+                                        <div class="stat-number" data-target="404">0</div>
+                                        <div class="stat-label">Pages Lost Today</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6 mb-3">
+                                    <div class="stat-card animated-counter">
+                                        <div class="stat-number" data-target="99999">0</div>
+                                        <div class="stat-label">Coffee Cups Needed</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6 mb-3">
+                                    <div class="stat-card animated-counter">
+                                        <div class="stat-number" data-target="42">0</div>
+                                        <div class="stat-label">Answer to Everything</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6 mb-3">
+                                    <div class="stat-card animated-counter">
+                                        <div class="stat-number" data-target="100">0</div>
+                                        <div class="stat-label">% Chance You'll Find Home</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Easter Eggs Section -->
+                        <div class="easter-eggs mt-5">
+                            <h5 class="text-muted mb-4">🥚 Hidden Features (Click to Discover!)</h5>
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <div class="easter-egg" onclick="triggerEasterEgg('konami')">
+                                        <div class="egg-icon">🎮</div>
+                                        <small>Konami Code</small>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="easter-egg" onclick="triggerEasterEgg('matrix')">
+                                        <div class="egg-icon">💊</div>
+                                        <small>Matrix Mode</small>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="easter-egg" onclick="triggerEasterEgg('disco')">
+                                        <div class="egg-icon">🕺</div>
+                                        <small>Disco Time</small>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="easter-egg" onclick="triggerEasterEgg('gravity')">
+                                        <div class="egg-icon">🌍</div>
+                                        <small>Zero Gravity</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Dynamic Message Generator -->
+                        <div class="message-generator mt-5 bg-info bg-opacity-10 p-4 rounded-4">
+                            <h5 class="text-info-emphasis mb-3">
+                                <i class="fas fa-robot me-2"></i>404 Message Generator
+                            </h5>
+                            <div class="generated-message p-3 bg-white rounded-3 mb-3" id="generatedMessage">
+                                Welcome to the digital construction zone! Our engineers are hard at work.
+                            </div>
+                            <button class="btn btn-info" onclick="generateRandomMessage()">
+                                <i class="fas fa-refresh me-2"></i>Generate New Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>&copy; 2025 Omkar Kumar Sharma. All rights reserved.</p>
+                    <p class="text-white-50">Designed with <i class="fas fa-heart text-danger heart-beat"></i> for showcasing civil engineering excellence.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+    <!-- 404 Specific JS -->
+    <script src="js/404.js"></script>
+</body>
+</html>

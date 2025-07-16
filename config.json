@@ -1,0 +1,84 @@
+{
+  "personalInfo": {
+    "name": "Omkar Kumar Sharma",
+    "title": "Diploma Civil Engineer",
+    "tagline": "Designing Practical & Efficient Infrastructure for a Better Tomorrow",
+    "email": "okskumar799@gmail.com",
+    "phone": "+91 9335088018",
+    "location": "Siwan, Bihar",
+    "website": "https://omkarkumar.me/"
+  },
+  "education": {
+    "diploma": {
+      "degree": "Diploma in Civil Engineering",
+      "institution": "Government Polytechnic, Chhapar",
+      "year": "2022-2025",
+      "percentage": "75%",
+      "status": "Complete in Jun 2025"
+    },
+    "tenth": {
+      "institution": "B.M.B Maranpur",
+      "year": "2022",
+      "percentage": "68%",
+      "month": "March 2022"
+    }
+  },
+  "skills": {
+    "AutoCAD": {
+      "level": "Advanced",
+      "percentage": 90
+    },
+    "Estimation & Costing": {
+      "level": "Advanced", 
+      "percentage": 85
+    },
+    "Reinforced Concrete Design": {
+      "level": "Intermediate",
+      "percentage": 75
+    },
+    "Steel Design": {
+      "level": "Advanced",
+      "percentage": 80
+    },
+    "MS Excel (BOQ)": {
+      "level": "Intermediate",
+      "percentage": 70
+    },
+    "Basic STAAD Pro": {
+      "level": "Beginner",
+      "percentage": 60
+    }
+  },
+  "project": {
+    "title": "College Parking Project",
+    "subtitle": "Government Polytechnic, Chhapar",
+    "description": "Design and Cost Estimation of Covered Parking Facility",
+    "dimensions": "50 ft × 18 ft",
+    "cost": "₹75,795",
+    "structure": "MS Trusses with GI roofing",
+    "capacity": "Two-wheelers and light four-wheelers",
+    "features": [
+      "Sloped roof design (12 ft back, 11 ft front)",
+      "Perpendicular parking system", 
+      "Utilization of existing paved area (48 ft × 16 ft)",
+      "Steel structure with GI sheets"
+    ]
+  },
+  "languages": {
+    "Hindi": "Native",
+    "English": "Intermediate"
+  },
+  "socialLinks": {
+    "linkedin": "#",
+    "github": "#",
+    "whatsapp": "https://wa.me/919335088018"
+  },
+  "siteSettings": {
+    "primaryColor": "#2c5aa0",
+    "secondaryColor": "#34495e", 
+    "accentColor": "#3498db",
+    "enableAnimations": true,
+    "enableTypingEffect": true,
+    "enableSmoothScrolling": true
+  }
+}
